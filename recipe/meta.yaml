@@ -1,5 +1,5 @@
 {% set name = "climada-petals" %}
-{% set version = "6.1.0" %}
+{% set version = "6.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/climada_petals-{{ version }}.tar.gz
-  sha256: ed72932839a96f9685553887871be5bb4b99c0e1cc2da30e49b0c81b9f257935
+  sha256: a1dc78da2805c21053d92cc9e8fc2d9460eef337beed1dd2cc9c077968aee65b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   host:
@@ -32,6 +32,7 @@ requirements:
     - libgdal =3.10
     - osm-flex =1.1
     - overpy =0.7
+    - pymoo =0.6.1
     - pymrio >=0.4.8
     - rioxarray =0.19
     - ruamel.yaml =0.18
